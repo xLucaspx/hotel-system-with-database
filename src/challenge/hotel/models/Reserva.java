@@ -3,13 +3,13 @@ package challenge.hotel.models;
 import java.time.LocalDate;
 
 public class Reserva {
-	private Integer id;
+	private int id;
 	private LocalDate dataEntrada;
 	private LocalDate dataSaida;
 	private String valor;
 	private String formaPagamento;
 
-	public Reserva(Integer id, LocalDate dataEntrada, LocalDate datSaida, String valor, String formaPagamento) {
+	public Reserva(int id, LocalDate dataEntrada, LocalDate datSaida, String valor, String formaPagamento) {
 		this.id = id;
 		this.dataEntrada = dataEntrada;
 		this.dataSaida = datSaida;
@@ -24,11 +24,11 @@ public class Reserva {
 		this.formaPagamento = formaPagamento;
 	}
 	
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
 

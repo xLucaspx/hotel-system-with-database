@@ -3,16 +3,16 @@ package challenge.hotel.models;
 import java.time.LocalDate;
 
 public class Hospede {
-	private Integer id;
+	private int id;
 	private String nome;
 	private String sobrenome;
 	private LocalDate dataNascimento;
 	private String nacionalidade;
 	private String telefone;
-	private Integer id_reserva;
-	
-	public Hospede(Integer id, String nome, String sobrenome, LocalDate dataNascimento, String nacionalidade,
-			String telefone, Integer id_reserva) {
+	private int id_reserva;
+
+	public Hospede(int id, String nome, String sobrenome, LocalDate dataNascimento, String nacionalidade,
+			String telefone, int id_reserva) {
 		this.id = id;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
@@ -30,11 +30,11 @@ public class Hospede {
 		this.telefone = telefone;
 	}
 
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -46,11 +46,11 @@ public class Hospede {
 		this.telefone = telefone;
 	}
 
-	public Integer getId_reserva() {
+	public int getId_reserva() {
 		return id_reserva;
 	}
 
-	public void setId_reserva(Integer id_reserva) {
+	public void setId_reserva(int id_reserva) {
 		this.id_reserva = id_reserva;
 	}
 
@@ -68,5 +68,5 @@ public class Hospede {
 
 	public String getNacionalidade() {
 		return nacionalidade;
-	}	
+	}
 }
