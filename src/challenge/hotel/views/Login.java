@@ -32,6 +32,7 @@ public class Login extends JFrame {
 	private int mouseX, mouseY;
 
 	public Login() {
+		super("White Lotus - Login");
 		setBounds(100, 100, 788, 527);
 		setResizable(false);
 		setLocationRelativeTo(null);

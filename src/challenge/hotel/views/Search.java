@@ -37,6 +37,7 @@ public class Search extends JFrame {
 	private int mouseX, mouseY;
 
 	public Search() {
+		super("White Lotus - Busca");
 		setBounds(100, 100, 910, 571);
 		setResizable(false);
 		setLocationRelativeTo(null);

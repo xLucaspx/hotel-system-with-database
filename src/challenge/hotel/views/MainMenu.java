@@ -27,6 +27,7 @@ public class MainMenu extends JFrame {
 	private int mouseX, mouseY;
 
 	public MainMenu() {
+		super("White Lotus Hotel");
 		setBounds(100, 100, 910, 537);
 		setResizable(false);
 		setLocationRelativeTo(null);

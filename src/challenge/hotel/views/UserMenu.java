@@ -34,6 +34,7 @@ public class UserMenu extends JFrame {
 	private int mouseX, mouseY;
 
 	public UserMenu() {
+		super("White Lotus Hotel");
 		setBounds(100, 100, 944, 609);
 		setResizable(false);
 		setLocationRelativeTo(null);
@@ -109,7 +110,7 @@ public class UserMenu extends JFrame {
 		date = "Hoje é " + today.format(formatter);
 
 		dateLabel = new JLabel(date);
-		dateLabel.setBounds(35, 64, 294, 36);
+		dateLabel.setBounds(40, 64, 294, 36);
 		dateLabel.setForeground(Color.WHITE);
 		dateLabel.setFont(new Font("Roboto", Font.PLAIN, 33));
 
@@ -119,7 +120,7 @@ public class UserMenu extends JFrame {
 				+ "<br> o fluxo de reservas e hóspedes do hotel</body></html>";
 
 		descriptionLabel1 = new JLabel(descriptionText1);
-		descriptionLabel1.setBounds(310, 291, 598, 66);
+		descriptionLabel1.setBounds(300, 291, 598, 66);
 		descriptionLabel1.setFont(new Font("Roboto", Font.PLAIN, 17));
 
 		contentPane.add(descriptionLabel1);
@@ -128,25 +129,25 @@ public class UserMenu extends JFrame {
 				+ "e hóspedes; você terá acesso a ferramentas especiais para tarefas específicas, como:</body></html>";
 
 		descriptionLabel2 = new JLabel(descriptionText2);
-		descriptionLabel2.setBounds(310, 345, 569, 88);
+		descriptionLabel2.setBounds(300, 345, 569, 88);
 		descriptionLabel2.setFont(new Font("Roboto", Font.PLAIN, 17));
 
 		contentPane.add(descriptionLabel2);
 
 		descriptionLabel3 = new JLabel("• Registro de reservas e hóspedes;");
-		descriptionLabel3.setBounds(312, 444, 295, 27);
+		descriptionLabel3.setBounds(310, 444, 295, 27);
 		descriptionLabel3.setFont(new Font("Roboto", Font.PLAIN, 17));
 
 		contentPane.add(descriptionLabel3);
 
 		descriptionLabel4 = new JLabel("• Edição de reservas e hóspedes existentes;");
-		descriptionLabel4.setBounds(312, 482, 355, 27);
+		descriptionLabel4.setBounds(310, 482, 355, 27);
 		descriptionLabel4.setFont(new Font("Roboto", Font.PLAIN, 17));
 
 		contentPane.add(descriptionLabel4);
 
 		descriptionLabel5 = new JLabel("• Excluir todos os tipos de registros.");
-		descriptionLabel5.setBounds(312, 520, 295, 27);
+		descriptionLabel5.setBounds(310, 520, 295, 27);
 		descriptionLabel5.setFont(new Font("Roboto", Font.PLAIN, 17));
 
 		contentPane.add(descriptionLabel5);
@@ -172,15 +173,15 @@ public class UserMenu extends JFrame {
 		
 		exitButton.add(exitLabel);
 		
-		titleLabel1 = new JLabel("Sistema de reservas White Lotus");
-		titleLabel1.setBounds(35, 11, 356, 42);
+		titleLabel1 = new JLabel("Controle de Reservas - White Lotus");
+		titleLabel1.setBounds(40, 11, 395, 42);
 		titleLabel1.setForeground(Color.WHITE);
 		titleLabel1.setFont(new Font("Roboto", Font.PLAIN, 24));
 		
 		datePanel.add(titleLabel1);
 		
 		titleLabel2 = new JLabel("Bem-vindo(a)");
-		titleLabel2.setBounds(305, 234, 147, 46);
+		titleLabel2.setBounds(300, 234, 157, 46);
 		titleLabel2.setFont(new Font("Roboto", Font.BOLD, 24));
 		
 		contentPane.add(titleLabel2);
