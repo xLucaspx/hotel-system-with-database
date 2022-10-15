@@ -459,13 +459,13 @@ public class Reservations extends JFrame {
 	}
 
 	private boolean checkValues(String checkInDate, String checkOutDate, String value) {
-		if (value.isEmpty() || value.isBlank()) {
+		if (value.isEmpty()) {
 			JOptionPane.showMessageDialog(this, "Por favor, insira um valor maior que $ 0.00", "Atenção!",
 					JOptionPane.WARNING_MESSAGE, null);
 			return false;
 		}
 
-		if (checkInDate.isEmpty() || checkInDate.isBlank() || checkOutDate.isEmpty() || checkOutDate.isBlank()) {
+		if (checkInDate.isEmpty() || checkOutDate.isEmpty()) {
 			JOptionPane.showMessageDialog(this,
 					"Por favor, insira um valor válido para as datas de check-in e check-out", "Atenção!",
 					JOptionPane.WARNING_MESSAGE, null);
