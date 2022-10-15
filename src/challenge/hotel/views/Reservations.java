@@ -398,7 +398,7 @@ public class Reservations extends JFrame {
 				if (checkValues(checkInDate, checkOutDate, totalValue)) {
 					int id = registerReservation(checkInDate, checkOutDate, totalValue,
 							paymentField.getSelectedItem().toString());
-					
+
 					GuestRegistration guestRegistration = new GuestRegistration(id);
 					guestRegistration.setVisible(true);
 					dispose();
@@ -459,9 +459,24 @@ public class Reservations extends JFrame {
 	}
 
 	private boolean checkValues(String checkInDate, String checkOutDate, String value) {
+		if (value.isEmpty() || value.isBlank()) {
+			JOptionPane.showMessageDialog(this, "Por favor, insira um valor maior que $ 0.00", "Atenção!",
+					JOptionPane.WARNING_MESSAGE, null);
+			return false;
+		}
+
+		if (checkInDate.isEmpty() || checkInDate.isBlank() || checkOutDate.isEmpty() || checkOutDate.isBlank()) {
+			JOptionPane.showMessageDialog(this,
+					"Por favor, insira um valor válido para as datas de check-in e check-out", "Atenção!",
+					JOptionPane.WARNING_MESSAGE, null);
+			return false;
+		}
+
 		Double doubleValue = Double.parseDouble(value);
 
 		if (doubleValue == 0) {
+			JOptionPane.showMessageDialog(this, "O valor da reserva deve ser maior que $ 0.00", "Atenção!",
+					JOptionPane.WARNING_MESSAGE, null);
 			return false;
 		}
 
@@ -473,7 +488,17 @@ public class Reservations extends JFrame {
 		LocalDate checkOut = LocalDate.of(Integer.parseInt(checkOutArray[2]), Integer.parseInt(checkOutArray[1]),
 				Integer.parseInt(checkOutArray[0]));
 
+		if (checkIn.isBefore(LocalDate.now())) {
+			JOptionPane.showMessageDialog(this,
+					"Valor inválido inserido para datas:\nO check-in não pode ser no passado", "Atenção!",
+					JOptionPane.WARNING_MESSAGE, null);
+			return false;
+		}
+
 		if (checkOut.isBefore(checkIn)) {
+			JOptionPane.showMessageDialog(this,
+					"Valor inválido inserido para datas:\nO check-out deve ser depois do check-in", "Atenção!",
+					JOptionPane.WARNING_MESSAGE, null);
 			return false;
 		}
 
@@ -506,9 +531,14 @@ public class Reservations extends JFrame {
 	private int registerReservation(String checkInDate, String checkOutDate, String totalValue, String paymentMethod) {
 		int id = reservationController.registerReservation(checkInDate, checkOutDate, totalValue, paymentMethod);
 		
-		String message = "Reserva cadastrada com sucesso!\nID: " +  id;
-		JOptionPane.showMessageDialog(this, message, "Cadastro de reserva", JOptionPane.INFORMATION_MESSAGE, null);
+		if (id > 0) {
+			String message = "Reserva cadastrada com sucesso!\nId: " + id;
+			JOptionPane.showMessageDialog(this, message, "Cadastro de reserva", JOptionPane.INFORMATION_MESSAGE, null);
 		
+		} else {
+			String message = "Erro ao cadastrar reserva:\nCódigo " + id;
+			JOptionPane.showMessageDialog(this, message, "Atenção!", JOptionPane.ERROR_MESSAGE, null);
+		}
 		return id;
 	}
 
