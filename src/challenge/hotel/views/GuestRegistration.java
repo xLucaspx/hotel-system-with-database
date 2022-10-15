@@ -620,7 +620,7 @@ public class GuestRegistration extends JFrame {
 			return false;
 		}
 
-		if (!reservationId.matches("\\d+")) {
+		if (!reservationId.matches("\\d+") || Integer.parseInt(reservationId) <= 0) {
 			JOptionPane.showMessageDialog(this, "Id da reserva inválido", "Atenção!", JOptionPane.WARNING_MESSAGE,
 					null);
 			return false;
