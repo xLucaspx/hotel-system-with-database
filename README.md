@@ -1,11 +1,14 @@
 # Sistema de hotel integrado com banco de dados
 
-![Challenge badge](img/badge-challenge-hotel.png)
 ![Versão do programa](https://img.shields.io/badge/Version-1.0-informational)
 ![GitHub stars](https://img.shields.io/github/stars/xLucaspx/hotel-system-with-database)
 ![GitHub issues](https://img.shields.io/github/issues/xLucaspx/hotel-system-with-database)
 
 Uma aplicação desktop que simula o sistema de um hotel conectado a um banco de dados para manter reservas e hóspedes. Desenvolvida com Java, utilizando Swing para a interface gráfica, e conectada com MySQL.
+
+<div align="center">
+    <img src="img/badge-challenge-hotel.png" alt="Badge do desafio" title="Challenge badge" width="200" height="200">
+</div>
 
 ## Índice
 
@@ -85,37 +88,37 @@ Ao selecionar qualquer linha da tabela clicando uma vez, o usuário poderá excl
 
 ### Telas
 
-- Tela inicial:
+- **Tela inicial**:
 
 <div align="center">
     <img src="img/home.jpg" alt="Tela inicial da aplicação com um botão de login" title="Tela inicial">
 </div>
 
-- Tela de login:
+- **Tela de login**:
 
 <div align="center">
     <img src="img/login.jpg" alt="Um campo para nome de usuário, um campo para senha e um botão para entrar" title="Tela de login">
 </div>
 
-- Menu principal:
+- **Menu principal**:
 
 <div align="center">
     <img src="img/main-menu.jpg" alt="Data atual, informações do sistema, botão para registrar uma reserva e botão para consultar banco de dados" title="Menu principal">
 </div>
 
-- Registro de reserva:
+- **Registro de reserva**:
 
 <div align="center">
     <img src="img/register-reservation.jpg" alt="Tela de registro com 5 campos para input do usuário e botão próximo" title="Registro de reserva">
 </div>
 
-- Registro de hóspede:
+- **Registro de hóspede**:
 
 <div align="center">
     <img src="img/register-guest.jpg" alt="Tela de registro com 6 campos para input do usuário e botão concluído" title="Registro de hóspede">
 </div>
 
-- Tela de consulta:
+- **Tela de consulta**:
 
 <div align="center">
     <img src="img/tables.jpg" alt="Um painel de abas com 2 abas, uma para reservas e outra para hóspedes, cada um contendo uma tabela correspondente e botões editar e deletar" title="Tela de consulta">
